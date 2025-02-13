@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.js">
+ 
+</head>
+<body>
+  <div class="container">
+    <div class="flex flex-col items-center md:items-start">
+      <img alt="Main product image" class="product-image" id="main-image" src="https://cdn.shopify.com/s/files/1/2098/8127/products/AX007_530x@2x.jpg?v=1571609036"/>
+      <div class="thumbnail-images flex gap-2 mt-4">
+        <img alt="Thumbnail image 1" class="border-2 border-blue-500 rounded-lg w-16 h-16 cursor-pointer selected" onclick="changeImage(this)" src="https://03b18112381be368e8b3-5edf578967eb97c7ec1d68faeaa8ce89.ssl.cf2.rackcdn.com/product-hugerect-2764766-315777-1531646388-cec8d352bb1e9d968484f560aceb92c7.jpg"/>
+        <img alt="Thumbnail image 2" class="border-2 border-transparent rounded-lg w-16 h-16 cursor-pointer" onclick="changeImage(this)" src="https://th.bing.com/th/id/OIP.U1OujsgUWwN_2GFS1cXkGwHaLF?rs=1&pid=ImgDetMain"/>
+        <img alt="Thumbnail image 3" class="border-2 border-transparent rounded-lg w-16 h-16 cursor-pointer" onclick="changeImage(this)" src="https://th.bing.com/th/id/OIP.O0YXrS-H7mcQBH7U6Bpl-AHaLH?pid=ImgDet&w=474&h=711&rs=1"/>
+        <img alt="Thumbnail image 4" class="border-2 border-transparent rounded-lg w-16 h-16 cursor-pointer" onclick="changeImage(this)" src="https://th.bing.com/th/id/OIP.aIV1SvHBXy59WydVFsILbgHaLH?rs=1&pid=ImgDetMain"/>
+      </div>
+    </div>
+    <div class="product-details">
+      <div class="product-title">Embrace Sideboard</div>
+      <div class="product-price">$12999.00
+        <del>$19999.00</del>
+        <span class="product-discount">35% Off</span>
+      </div>
+      <div class="color-options">
+        <label>Choose a Color</label>
+        <div class="colors">
+          <div class="selected" style="background-color: #e0e0e0;"></div>
+          <div style="background-color: #c0e0c0;"></div>
+          <div style="background-color: #c0c0e0;"></div>
+          <div style="background-color: #e0c0e0;"></div>
+        </div>
+      </div>
+      <div class="size-options">
+        <label>Choose a Size</label>
+        <div class="sizes">
+          <label class="selected">Small</label>
+          <label>Medium</label>
+          <label>Large</label>
+          <label>Extra Large</label>
+          <label>XXL</label>
+        </div>
+      </div>
+      <div class="quantity">
+        <button onclick="decrementQuantity()">-</button>
+        <input id="quantity-input" type="text" value="1"/>
+        <button onclick="incrementQuantity()">+</button>
+      </div>
+      <button class="add-to-cart" onclick="addToCart()">Add To Cart</button>
+      <div class="product-description">
+        The Embrace Sideboard is a stylish wear. With a top cloth designed to provide superior protection and look great, this storage solution is both functional and attractive. It fits seamlessly into any home decor, with clean lines and a timeless look. Crafted from premium materials for a combination of style, durability, and reliability.
+      </div>
+    </div>
+  </div>
+  <div class="popup-message" id="popup-message">Added to cart successfully!</div>
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>
